@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Object Oriented Programming</title>
+  <script>
+    function Person(personName) {
+        this.name = personName;
+        this.info = 'This person is called' + this.name;
+        this.showinfo = function() {
+          console.log(this.info);
+        }
+      }
+      var person1 = new Person('Adam');
+      var person2 = new Person('Eve');
+      Person.prototype.sayHello = function() {
+        console.log(this.name + "says hello");
+      }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="show info on Adam" onclick="person1.showinfo()"/>
+  <input type="button" value="show info on Eve" onclick="person2.showinfo()"/>
+  <input type="button" value="Say Hello Adam" onclick="person1.sayHello()"/>
+  <input type="button" value="Say Hello Eve" onclick="person2.sayHello()"/>
+</body>
+
+</html>
